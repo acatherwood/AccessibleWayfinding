@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
+        <SuccessConfirmation />
     <h1>{{ msg }}</h1>
+    <p> Let's go!</p>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,8 +33,13 @@
 </template>
 
 <script>
+import SuccessConfirmation from './SuccessConfirmation.vue'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    SuccessConfirmation
+  },
   props: {
     msg: String
   }
@@ -41,6 +48,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  font-size: 64px;
+}
 h3 {
   margin: 40px 0 0;
 }
